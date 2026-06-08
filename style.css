@@ -4,6 +4,24 @@
   padding: 0;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--navy);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 200;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 :root {
   --navy: #0A1628;
   --navy-mid: #152238;
@@ -257,6 +275,22 @@ h1 em {
   justify-content: center;
 }
 
+.section-label.centered::before {
+  content: none;
+}
+
+.section-label.centered::after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-label.centered {
+  gap: 0.75rem;
+}
+
 .section-heading {
   font-family: 'Cormorant Garant', serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
@@ -352,7 +386,17 @@ h1 em {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s;
-  cursor: default;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card > *:not(.card-image):not(.project-metrics) {
+  /* ensure metrics + cta stay at bottom */
+}
+
+.project-metrics {
+  margin-top: auto;
 }
 
 .project-card::after {
@@ -442,6 +486,85 @@ h1 em {
   margin-top: 0.2rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.card-cta:hover {
+  gap: 0.7rem;
+}
+
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ─── CARD IMAGES ────────────────────────────────── */
+.card-image {
+  margin: -2.5rem -2.5rem 1.75rem;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--navy-mid);
+  flex-shrink: 0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+.card-image--placeholder {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1e3a5f 100%);
+  position: relative;
+}
+
+.card-image--placeholder::after {
+  content: 'Screenshot coming soon';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card.featured:hover .project-visual img {
+  transform: scale(1.03);
 }
 
 /* ─── PROJECT VISUAL MOCK ─────────────────────────── */
@@ -722,7 +845,27 @@ footer p {
   }
 
   .hero-right {
-    display: none;
+    display: block;
+    padding-left: 0;
+    color: var(--text-dark);
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero-right .hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .hero-right .stat-num {
+    font-size: 1.6rem;
+    color: var(--gold);
+  }
+
+  .hero-right .stat-label {
+    color: var(--text-muted);
+    font-size: 0.7rem;
   }
 
   .about,
@@ -759,5 +902,17 @@ footer p {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-right .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0;
+  }
+
+  .card-links {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

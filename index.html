@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cathy Ly — Product & UX</title>
+  <title>Cathy Ly — Product Designer & UX Researcher</title>
+  <meta name="description" content="Cathy Ly — Product Designer and UX Researcher. HCI master's student at DePaul. Designing and shipping products at the intersection of EdTech, health tech, and accessibility." />
+  <meta property="og:title" content="Cathy Ly — Product Designer & UX Researcher" />
+  <meta property="og:description" content="Designing and shipping products in EdTech, health tech, and accessibility. CHI 2026 published researcher. HCI @ DePaul · CS @ NAU." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cathy Ly — Product Designer & UX Researcher" />
+  <meta name="twitter:description" content="Designing and shipping products in EdTech, health tech, and accessibility. CHI 2026 published researcher." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,8 +21,10 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ─── NAV ─────────────────────────────────────── -->
-  <nav>
+  <nav aria-label="Main navigation">
     <a class="nav-logo" href="#">Cathy Ly</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -25,21 +34,23 @@
     </ul>
   </nav>
 
+  <main id="main-content">
+
   <!-- ─── HERO ─────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
 
       <div class="hero-left">
-        <p class="hero-eyebrow fade-up">Product Manager & UX Researcher</p>
+        <p class="hero-eyebrow fade-up">Product Designer · Ships in Code</p>
         <h1 class="fade-up">
-          Building tech<br>
-          <em>that matters.</em>
+          Design that ships.<br>
+          <em>Not just specs.</em>
         </h1>
         <p class="hero-sub fade-up">
-          HCI master's student at DePaul University. CS graduate from NAU.
-          I design and ship products at the intersection of education,
-          accessibility, and human behavior.
+          HCI master's student at DePaul. CS graduate from NAU.
+          I design, prototype, and build — closing the gap between
+          Figma and production. Focused on EdTech and accessibility.
         </p>
         <div class="hero-cta fade-up">
           <a href="#work" class="btn-primary">View My Work →</a>
@@ -55,7 +66,7 @@
           </div>
           <div class="stat-item">
             <div class="stat-num">5+</div>
-            <div class="stat-label">UX Projects</div>
+            <div class="stat-label">Products Shipped</div>
           </div>
           <div class="stat-item">
             <div class="stat-num">9</div>
@@ -79,39 +90,40 @@
 
         <div class="about-text">
           <h2 class="section-heading">
-            I turn user research into products people actually want to use.
+            I design, prototype, and ship — in code, not just Figma.
           </h2>
           <p>
             I'm a Program Manager at GoSTEM — a Chicago-based STEM education
-            nonprofit — and a co-founder of Unspecified Studios, where I lead
-            development of Kingdom of Influence, an evidence-based game for
-            adults with autism built with therapists and neurodivergent communities.
+            nonprofit — and co-founder of Unspecified Studios, where I lead
+            development of Kingdom of Influence, an evidence-based therapeutic
+            game built with clinicians and neurodivergent communities.
           </p>
           <p>
-            My work spans the full product lifecycle: from IRB-approved user
-            research and usability testing, to wireframes and high-fidelity
-            prototypes, to shipping features and managing cross-functional teams.
-            I'm pursuing my HCI master's at DePaul University (graduating 2027).
+            I work across the full product lifecycle: IRB-approved user research,
+            high-fidelity prototyping, and shipping features directly into
+            production codebases. I'm comfortable in unfamiliar stacks and I
+            push back when a framing is weak.
+            Pursuing my HCI master's at DePaul (graduating 2027).
           </p>
           <p>
-            What drives me is the question of whose needs get centered in design.
-            I'm especially interested in EdTech, health tech, and accessibility —
-            spaces where product decisions carry real consequences for real people.
+            I'm drawn to EdTech, health tech, and accessibility — spaces where
+            design decisions carry real consequences. I care about who gets
+            centered in the product, and I build accordingly.
           </p>
         </div>
 
         <div class="about-right">
           <div class="skills-grid">
-            <div class="skill-tag">User Research</div>
-            <div class="skill-tag">Usability Testing</div>
-            <div class="skill-tag">Figma & Prototyping</div>
-            <div class="skill-tag">Product Roadmapping</div>
-            <div class="skill-tag">Grant Management</div>
-            <div class="skill-tag">Cross-Functional Teams</div>
-            <div class="skill-tag">Data Analysis (Python)</div>
+            <div class="skill-tag">Ships in Code</div>
             <div class="skill-tag">HTML / CSS / JS</div>
             <div class="skill-tag">Firebase & Flutter</div>
+            <div class="skill-tag">Figma & Prototyping</div>
             <div class="skill-tag">Unity & Godot</div>
+            <div class="skill-tag">User Research</div>
+            <div class="skill-tag">Usability Testing</div>
+            <div class="skill-tag">Product Roadmapping</div>
+            <div class="skill-tag">Data Analysis (Python)</div>
+            <div class="skill-tag">Cross-Functional Teams</div>
           </div>
           <a href="https://www.linkedin.com/in/cathyly2002" target="_blank" class="pub-badge">
             View LinkedIn Profile →
@@ -141,10 +153,13 @@
             <span class="project-tag">UX Research + Design</span>
             <h3 class="project-title">UXPlore — NAU Study Abroad Redesign</h3>
             <p class="project-desc">
-              Students were giving up on the study abroad portal and asking
-              advisors instead. I led two-phase research with 14 participants
-              (faculty + students) to identify core pain points, then redesigned
-              the IA and high-fidelity prototype in Canva.
+              Students were abandoning the study abroad portal and going to
+              advisors directly. I led two-phase research with 14 participants
+              (faculty + students) and found: information overload made users
+              feel "lost," financial details were nearly unfindable, and 4 of 10
+              students cited outdated design as a reason for distrust. Redesigned
+              the IA, collapsed a confusing 3-tab system into one unified search,
+              and delivered a high-fidelity prototype.
             </p>
             <div class="project-tags">
               <span class="pill">Usability Testing</span>
@@ -166,126 +181,17 @@
                 <div class="metric-lbl">Research Phases</div>
               </div>
             </div>
+            <a href="files/Slide Deck Presentation.pdf" target="_blank" class="card-cta" style="margin-top:1.5rem;">View Prototype Deck →</a>
           </div>
           <div class="project-visual">
-            <embed src="files/Slide Deck Presentation.pdf" type="application/pdf" width="100%" height="100%"/>
-            </div>
+            <img src="files/img/uxplorepreview.jpg" alt="UXPlore redesign prototype screens showing unified search and featured programs layout" />
           </div>
         </div>
 
-        <!-- D2L -->
+        <!-- Kingdom of Influence — moved up: strongest real-world credibility -->
         <div class="project-card">
-          <span class="project-tag">UX Design + Usability Testing</span>
-          <h3 class="project-title">D2L Dashboard Redesign</h3>
-          <p class="project-desc">
-            Redesigned DePaul's D2L learning management dashboard after conducting
-            usability testing. Added an AI chat feature, reorganized assignment
-            hierarchy, and improved visual clarity. Full before/after prototype
-            delivered in Figma.
-          </p>
-          <div class="project-tags">
-            <span class="pill">Figma</span>
-            <span class="pill">DePaul HCI</span>
-            <span class="pill">Before/After</span>
-            <span class="pill">AI Feature Design</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric">
-              <div class="metric-val">Mid-fi</div>
-              <div class="metric-lbl">to High-fi</div>
-            </div>
-            <div class="metric">
-              <div class="metric-val">3</div>
-              <div class="metric-lbl">Key Screens</div>
-            </div>
-          </div>
-          <div>          
-            <a href="files/TheIncredibles_D2L_Presentation.pdf" target="_blank" class="pub-link">
-            View Presentation →
-          </a>
-          </div>
-
-          
-        </div>
-
-        <!-- LightDose -->
-        <div class="project-card">
-          <span class="project-tag">Mobile App + Hardware</span>
-          <h3 class="project-title">LightDose — MedTech Light Therapy App</h3>
-          <p class="project-desc">
-            NAU senior capstone. Built a Flutter mobile app connecting to custom
-            Arduino hardware via Bluetooth to make clinical light therapy accessible
-            at home. Led multiple client interview rounds, designed gamified patient
-            engagement, implemented Firebase + HIPAA-compliant architecture.
-          </p>
-          <div class="project-tags">
-            <span class="pill">Flutter</span>
-            <span class="pill">Firebase</span>
-            <span class="pill">Client Interviews</span>
-            <span class="pill">HIPAA</span>
-            <span class="pill">Gamification</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric">
-              <div class="metric-val">Cross</div>
-              <div class="metric-lbl">Disciplinary (CS + ME + EE)</div>
-            </div>
-          </div>
-          <div>          
-            <a href="files/EngFestPoster.pdf" target="_blank" class="pub-link">
-            View LightDose Poster →
-          </a>
-          </div>
-          <div>          
-            <a href="files/TENSEMEDDYNAMICPOSTER (1).pdf" target="_blank" class="pub-link">
-            View Tensemed Poster →
-          </a>
-          </div>
-          <div>          
-            <a href="files/Copy of LightDose.pdf" target="_blank" class="pub-link">
-            View Design →
-          </a>
-          </div>
-          
-        </div>
-
-        <!-- HaBits -->
-        <div class="project-card">
-          <span class="project-tag">Mobile UX Prototype</span>
-          <h3 class="project-title">HaBits — Habit Tracking App</h3>
-          <p class="project-desc">
-            Designed a full habit tracking mobile app with custom categories,
-            wearable sync, media upload, and a widget-based home screen.
-            Polished end-to-end user flow from onboarding through progress
-            visualization.
-          </p>
-          <div class="project-tags">
-            <span class="pill">Figma</span>
-            <span class="pill">Mobile UX</span>
-            <span class="pill">Onboarding Flow</span>
-            <span class="pill">Wearable Integration</span>
-          </div>
-          <div class="project-metrics">
-            <div class="metric">
-              <div class="metric-val">End-to-end</div>
-              <div class="metric-lbl">User Flow</div>
-            </div>
-          </div>
-          <div>          
-            <a href="files/HCI 430 narrative prototype (3).pdf" target="_blank" class="pub-link">
-            View Figma MidFi →
-          </a>
-          </div>
-          <div>          
-            <a href="https://www.figma.com/proto/w1FPvEE3PuIwuWC6yrUjIe/HCI-430-narrative-prototype?node-id=93-488&starting-point-node-id=93%3A488" target="_blank" class="pub-link">
-            View Figma MidFi Prototype →
-          </a>
-          </div>
-        </div>
-
-        <!-- Kingdom of Influence -->
-        <div class="project-card">
-          <span class="project-tag">EdTech Game Development</span>
+          <div class="card-image card-image--placeholder" aria-hidden="true"></div>
+          <span class="project-tag">EdTech · Game Development</span>
           <h3 class="project-title">Kingdom of Influence</h3>
           <p class="project-desc">
             Co-founder and Creative Director of a therapeutic game for
@@ -312,10 +218,102 @@
               <div class="metric-lbl">Grant Applied</div>
             </div>
           </div>
-          <div>          
-            <a href="https://unspecifiedstudios.squarespace.com/" target="_blank" class="pub-link">
-            View Unspecified Studios Website →
-          </a>
+          <a href="https://unspecifiedstudios.squarespace.com/" target="_blank" class="card-cta">View Unspecified Studios →</a>
+        </div>
+
+        <!-- LightDose -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="files/img/lightdosepreview.jpg" alt="LightDose app screens showing login flow, gamification, LightBot chat, and achievements" />
+          </div>
+          <span class="project-tag">Mobile App + Hardware</span>
+          <h3 class="project-title">LightDose — MedTech Light Therapy App</h3>
+          <p class="project-desc">
+            Designed and shipped a Flutter mobile app that connects to custom
+            Arduino hardware via Bluetooth — from research through production.
+            Owned the full UX: client interviews, gamified engagement design,
+            and hands-on implementation in a HIPAA-compliant Firebase architecture.
+            This went into the codebase, not just a Figma handoff.
+          </p>
+          <div class="project-tags">
+            <span class="pill">Flutter</span>
+            <span class="pill">Firebase</span>
+            <span class="pill">Client Interviews</span>
+            <span class="pill">HIPAA</span>
+            <span class="pill">Gamification</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric">
+              <div class="metric-val">Cross</div>
+              <div class="metric-lbl">Disciplinary (CS + ME + EE)</div>
+            </div>
+          </div>
+          <div class="card-links">
+            <a href="files/Copy of LightDose.pdf" target="_blank" class="card-cta">View App Design →</a>
+            <a href="files/EngFestPoster.pdf" target="_blank" class="card-cta">Poster →</a>
+          </div>
+        </div>
+
+        <!-- D2L -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="files/img/d2lpreview.jpg" alt="D2L dashboard before and after redesign showing AI chat and improved layout" />
+          </div>
+          <span class="project-tag">UX Design + Usability Testing</span>
+          <h3 class="project-title">D2L Dashboard Redesign</h3>
+          <p class="project-desc">
+            Redesigned DePaul's D2L learning management dashboard after conducting
+            usability testing with 8 students. Added an AI chat feature, reorganized
+            assignment hierarchy, and improved visual clarity. Iterated from
+            low-fi wireframes through mid-fidelity Figma prototypes.
+          </p>
+          <div class="project-tags">
+            <span class="pill">Figma</span>
+            <span class="pill">8 Participants</span>
+            <span class="pill">Before/After</span>
+            <span class="pill">AI Feature Design</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric">
+              <div class="metric-val">5</div>
+              <div class="metric-lbl">Design Requirements</div>
+            </div>
+            <div class="metric">
+              <div class="metric-val">Lo→Hi</div>
+              <div class="metric-lbl">Fidelity Arc</div>
+            </div>
+          </div>
+          <a href="files/TheIncredibles_D2L_Presentation.pdf" target="_blank" class="card-cta">View Presentation →</a>
+        </div>
+
+        <!-- HaBits -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="files/img/habitspreview.jpg" alt="HaBits habit tracking app mid-fidelity wireframes showing weekly goals, custom habits, and media album screens" />
+          </div>
+          <span class="project-tag">Mobile UX Prototype</span>
+          <h3 class="project-title">HaBits — Habit Tracking App</h3>
+          <p class="project-desc">
+            Designed a full habit tracking mobile app with custom categories,
+            wearable sync, media upload, and a widget-based home screen.
+            Polished end-to-end user flow from onboarding through progress
+            visualization.
+          </p>
+          <div class="project-tags">
+            <span class="pill">Figma</span>
+            <span class="pill">Mobile UX</span>
+            <span class="pill">Onboarding Flow</span>
+            <span class="pill">Wearable Integration</span>
+          </div>
+          <div class="project-metrics">
+            <div class="metric">
+              <div class="metric-val">7</div>
+              <div class="metric-lbl">Screens Designed</div>
+            </div>
+          </div>
+          <div class="card-links">
+            <a href="https://www.figma.com/proto/w1FPvEE3PuIwuWC6yrUjIe/HCI-430-narrative-prototype?node-id=93-488&starting-point-node-id=93%3A488" target="_blank" class="card-cta">View Prototype →</a>
+            <a href="files/HCI 430 narrative prototype (3).pdf" target="_blank" class="card-cta">PDF →</a>
           </div>
         </div>
 
@@ -380,11 +378,11 @@
     <div class="contact-inner">
       <p class="section-label centered">Let's Connect</p>
       <h2 class="section-heading">
-        Open to PM & UX roles in EdTech, health tech, and social impact.
+        Open to Product Designer, PM, and Product Engineer roles in EdTech and health tech.
       </h2>
       <p class="contact-desc">
-        I'm currently exploring Product Manager, Associate PM, and UX Research
-        roles. If you're working on something that matters, I'd love to talk.
+        I design, prototype, and build. If you're working on a product that
+        carries real consequences for real people, I'd love to talk.
       </p>
       <div class="contact-links">
         <a href="mailto:cathy.ly@outlook.com" class="contact-link">
@@ -409,6 +407,8 @@
       </div>
     </div>
   </section>
+
+  </main><!-- /#main-content -->
 
   <!-- ─── FOOTER ────────────────────────────────────── -->
   <footer>
